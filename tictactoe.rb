@@ -1,6 +1,6 @@
 class TicTacToe
     # constructor to initialize game
-    def intialize
+    def initialize
         @board = Array.new(3) {Array.new(3, " ") }
         @current_player = "X"
     end
@@ -56,7 +56,7 @@ class TicTacToe
             system("clear")
             display_board
             
-            puts "Player #{@current_player}, enter your move (row [0-2]. column [0-2]:)"
+            puts "Player #{@current_player}, enter your move (row [0-2], column [0-2]):"
             move = gets.chomp.split.map(&:to_i)
 
             row, col = move
